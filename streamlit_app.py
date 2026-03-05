@@ -164,7 +164,18 @@ def main() -> None:
     )
 
     config = build_config_from_sidebar()
-    monitor = build_monitor(config)
+    try:
+        monitor = build_monitor(config)
+    except RuntimeError as exc:
+        if "matplotlib" in str(exc):
+            st.warning(
+                "Reports are disabled because matplotlib is not available. "
+                "Install it to enable report generation."
+            )
+            config.enable_reports = False
+            monitor = build_monitor(config)
+        else:
+            raise
 
     action_col, approve_col, _ = st.columns([1, 2, 3])
     with action_col:
@@ -234,16 +245,21 @@ def main() -> None:
         st.info("No alerts recorded yet.")
 
     st.subheader("Latest Reports")
-    reports = list_reports(report_dir_path)
-    if reports:
-        for report_path in reports[:3]:
-            st.image(
-                str(report_path), caption=report_path.name, use_container_width=True
-            )
-    else:
+    if not config.enable_reports:
         st.info(
-            "No reports found. Enable reports and run an iteration to generate one."
+            "Reports are disabled. Enable reports and install matplotlib to view them."
         )
+    else:
+        reports = list_reports(report_dir_path)
+        if reports:
+            for report_path in reports[:3]:
+                st.image(
+                    str(report_path), caption=report_path.name, use_container_width=True
+                )
+        else:
+            st.info(
+                "No reports found. Enable reports and run an iteration to generate one."
+            )
 
 
 if __name__ == "__main__":
