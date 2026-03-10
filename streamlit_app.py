@@ -15,10 +15,6 @@ import streamlit as st
 
 from ai_rule_based_fim import CONFIG, MonitorConfig, build_monitor
 
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
-
 
 def human_bytes(size: int) -> str:
     neg = size < 0
