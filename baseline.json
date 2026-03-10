@@ -1,17 +1,17 @@
 {
   "/home/krxsna/dev/infosec-project/watched_dir/important.txt": {
     "path": "/home/krxsna/dev/infosec-project/watched_dir/important.txt",
-    "size": 30,
-    "mtime": 1771561235.8072119,
-    "atime": 1771533765.8479373,
+    "size": 34,
+    "mtime": 1772767246.8867748,
+    "atime": 1773162577.1505823,
     "owner": "krxsna",
-    "sha256": "0bb66620cbcb875601be8bdf1f889d2e1cb01609f1623782c8afc61e6ca67c0f"
+    "sha256": "f81021a44fe5a89e70abc0cf65a62fa16b725137c2308eeb5bb57daf00348008"
   },
   "/home/krxsna/dev/infosec-project/watched_dir/Cover letter.docx": {
     "path": "/home/krxsna/dev/infosec-project/watched_dir/Cover letter.docx",
     "size": 6508,
     "mtime": 1771533689.6424341,
-    "atime": 1771533696.686939,
+    "atime": 1773162592.8736866,
     "owner": "krxsna",
     "sha256": "82caf4ceee7fc522f9fa8a5a04ec152dafba0440fe5412826198630cd4b5d7b2"
   },
@@ -19,8 +19,16 @@
     "path": "/home/krxsna/dev/infosec-project/watched_dir/Software Engineering DA2 (1).pdf",
     "size": 669692,
     "mtime": 1771533782.19458,
-    "atime": 1771533786.9179368,
+    "atime": 1773162592.8766866,
     "owner": "krxsna",
     "sha256": "f842ec090bb97b7b547df87ec552c468fa3dce48266bcbe1da62e860af593724"
+  },
+  "/home/krxsna/dev/infosec-project/watched_dir/hello.txt": {
+    "path": "/home/krxsna/dev/infosec-project/watched_dir/hello.txt",
+    "size": 12,
+    "mtime": 1772767981.7627287,
+    "atime": 1773162577.1515822,
+    "owner": "krxsna",
+    "sha256": "8087828ab2cf4381caabe42f480ad748d7f88cfbfc84c602aa3a2de289940f18"
   }
 }
